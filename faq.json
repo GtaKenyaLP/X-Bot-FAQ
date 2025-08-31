@@ -1,0 +1,178 @@
+{
+  "faqs": [
+    {
+      "keywords": ["location", "where", "area", "place", "mahali", "enco", "location"],
+      "response": "We appreciate you showing interest in purchasing our Sun King products. Kindly share your current location to enable us to advise accordingly on pricing and availability. Feel free to also share your contact details and we will share more information and connect you with an agent near you for purchase.",
+      "response_sw": "Tunashukuru kwa kuonyesha nia ya kununua bidhaa zetu za Sun King. Tafadhali tueleze mahali ulipo sasa ili tuweze kukushauri kuhusu bei na upatikanaji. Unaweza pia kutusaidia nambari yako ya simu na tutakupa habari zaidi na kukuhusisha na muuzaji aliye karibu nawe.",
+      "category": "general"
+    },
+    {
+      "keywords": ["hello", "hi", "help", "support", "hujambo", "msaada"],
+      "response": "Hello! Thank you for contacting Sun King. How can we assist you today?",
+      "response_sw": "Hujambo! Tunashukuru kwa kuwasiliana na Sun King, je, ungependa kuhudumiwa vipi leo?",
+      "category": "greeting"
+    },
+    {
+      "keywords": ["contact", "phone", "number", "details", "mawasiliano", "simu", "nambari"],
+      "response": "Thank you for sharing your contact details. Our sales team shall engage you as soon as possible.",
+      "response_sw": "Asante kwa kutupatia maelezo yako ya mawasiliano. Wauzaji wetu watakurejelea haraka iwezekanavyo.",
+      "category": "general"
+    },
+    {
+      "keywords": ["purchase", "buy", "price", "cost", "installment", "cash", "ununuzi", "bei", "malipo"],
+      "response": "We're thrilled that you're considering purchasing our products 😊. Our products are available for both cash and installment payments. We have sent you more details via inbox for you to make an informed decision.",
+      "response_sw": "Tumefurahishwa umependezwa na bidhaa zetu 😊. Bidhaa zetu zinapatikana kwa malipo ya pesa taslimu au kwa mkopo. Tumetuma maelezo zaidi kwenye inbox yako ili uweze kufanya uamuzi sahihi.",
+      "category": "sales"
+    },
+    {
+      "keywords": ["shop", "store", "open", "close", "time", "hours", "duka", "fungua", "funga", "masaa"],
+      "response": "We are open Mondays to Fridays from 8 am to 5 pm, Saturdays from 9 am to 3 pm and we remain closed on Sundays.",
+      "response_sw": "Maduka yetu yanafunguliwa saa mbili asubuhi hadi saa kumi na moja jioni kutoka Jumatatu hadi Ijumaa, kisha saa tatu asubuhi hadi saa tisa jioni siku ya Jumamosi. Hatufungui duka siku ya Jumapili.",
+      "category": "operations"
+    },
+    {
+      "keywords": ["job", "work", "employment", "agent", "kazi", "ajira", "wakala"],
+      "response": "We will be delighted to have you work with us. We currently have an opening for sales agents that is commission-based. If interested, kindly share your full name, two phone numbers, and the location where you are based and we will contact you as soon as possible.",
+      "response_sw": "Tunashukuru kwa kupendezwa na huduma zetu na kutaka kujiunga nasi. Tafadhali tupatie majina kamili, namba mbili za simu na eneo unalotoka kwa maelezo zaidi.",
+      "category": "careers"
+    },
+    {
+      "keywords": ["payment", "pay", "mpesa", "bonga", "airtel", "lipa", "malipo"],
+      "response": "We appreciate your inquiry. You can pay via M-Pesa Paybill 323458, using your account number. You can also pay with Safaricom Bonga points or Airtel Money. Would you like detailed instructions?",
+      "response_sw": "Tunashukuru kwa hoja yako. Unaweza kulipa kupitia M-Pesa Paybill 323458, ukitumia nambari yako ya akaunti. Unaweza pia kulipa kwa kutumia pointi za Bonga za Safaricom au Airtel Money. Ungependa maelekezo ya kina?",
+      "category": "payments"
+    },
+    {
+      "keywords": ["code", "keycode", "usahihisho", "mfumo"],
+      "response": "You can request your recent Keycode through your registered Safaricom line by dialing our USSD code *305# option 1. If you didn't receive your keycode, kindly share your account number for assistance.",
+      "response_sw": "Unaweza kuomba Usahihisho wako wa hivi karibuni kupitia laini yako ya Safaricom kwa kupiga *305# kisha uchague option 1. Kama hukupata usahihisho wako, tafadhali tupatie nambari yako ya akaunti kwa usaidizi.",
+      "category": "payments"
+    },
+    {
+      "keywords": ["stolen", "theft", "lost", "ibwa", "potea"],
+      "response": "We are sorry to hear about your stolen product. Kindly report the incident to the nearest police station for an abstract. Unfortunately, stolen products are not covered under warranty. Please share your account number for reference.",
+      "response_sw": "Pole kwa kuhusu bidhaa yako iliyoibiwa. Tafadhali ripoti tukio hilo kwenye kituo cha polisi kilicho karibu nawe ili upatie abstract. Kwa bahati mbaya, bidhaa zilizoibiwa hazina dhamana. Tafadhali tupatie nambari yako ya akaunti kwa kumbukumbu.",
+      "category": "support"
+    },
+    {
+      "keywords": ["tv", "television", "standalone", "single", "tv pekee"],
+      "response": "Unfortunately, our products come in packages. We do not sell solar TVs as stand-alone products unless you are purchasing them as a spare part of a product you have already purchased from us. Would you be interested in the whole package?",
+      "response_sw": "Kwa bahati mbaya, bidhaa zetu huja kwenye vifurushi. Hatauzi TV za sola kama bidhaa pekee isipokuwa unazinunua kama sehemu ya ziada ya bidhaa uliyoinunua kutuka kwetu. Je, ungependa kifurushi chote?",
+      "category": "products"
+    },
+    {
+      "keywords": ["gas", "cylinder", "cooker", "meter", "lpg", "gesi", "mpishi"],
+      "response": "We offer 13 kg gas cylinders with smart meters. A cylinder with meter requires a deposit of Ksh. 1000 and weekly payments of at least Ksh. 255. We also have packages with tabletop two-burner gas cookers. These are currently available in select areas.",
+      "response_sw": "Tunatoa silinda za gesi za kg 13 zikiwa na mita za smart. Silinda na mita inahitaji amana ya Ksh. 1000 na malipo ya kila wiki ya angalau Ksh. 255. Tuna pia vifurushi vyenye jiko la gesi la burners mbili. Hizi zinapatikana kwa sasa katika maeneo machache.",
+      "category": "products"
+    },
+    {
+      "keywords": ["compliment", "thanks", "good", "great", "excellent", "ahsante", "nzuri"],
+      "response": "We value the fantastic feedback and strive diligently to meet expectations such as yours. Thank you for choosing Sun King.",
+      "response_sw": "Tunathamini maoni yako mazuri na tunajitahidi kukidhi matarajio kama yako. Asante kwa kuchagua Sun King.",
+      "category": "feedback"
+    },
+    {
+      "keywords": ["complaint", "problem", "issue", "error", "wrong", "tatizo", "kosa"],
+      "response": "We sincerely apologize for the inconvenience. Kindly let us know what the issue is for further assistance.",
+      "response_sw": "Tunaomba msamaha kwa usumbufu uliosababishwa. Tafadhali tueleze ni shida gani kwa usaidizi zaidi.",
+      "category": "support"
+    },
+    {
+      "keywords": ["why inbox", "why dm", "why direct", "inbox", "dm", "kwa nini inbox"],
+      "response": "We value your opinion. We usually move the conversation to your inbox so that our team can break it down into full details concerning the product you are interested in so you can make an informed decision. It's also easy for you to access the information in your inbox if need be in the future.",
+      "response_sw": "Tunathamini maoni yako. Kawaida tunahamisha mazungumzo kwenye inbox yako ili timu yetu iweze kukupa maelezo kamili kuhusu bidhaa unayoipenda ili uweze kufanya uamuzi sahihi. Pia ni rahisi kwako kupata habari hiyo kwenye inbox yako iwajapo katika siku zijazo.",
+      "category": "general"
+    },
+    {
+      "keywords": ["pro", "sun king pro", "pro system", "pro 350", "pro 4000"],
+      "response": "Sun King Pro comes with one lantern, a metal stand, a solar panel, and a phone charger with 3 different charging pins. Deposit: Ksh. 350, Daily: Ksh. 15 for 406 days (Total: Ksh. 6,440). Cash price: Ksh. 4,000.",
+      "response_sw": "Sun King Pro inajumuisha taa moja, stendi ya chuma, paneli ya jua, na chaja ya simu yenye pini tatu za kuchaji. Amana: Ksh. 350, Kila siku: Ksh. 15 kwa siku 406 (Jumla: Ksh. 6,440). Bei ya pesa taslimu: Ksh. 4,000.",
+      "category": "products"
+    },
+    {
+      "keywords": ["boom", "sun king boom", "boom radio", "boom 450", "boom 5400"],
+      "response": "Sun King Boom is a solar lantern with an inbuilt radio, memory card slot, phone chargers, a solar panel, and a metal stand. Deposit: Ksh. 450, Daily: Ksh. 20 for 406 days (Total: Ksh. 8,570). Cash price: Ksh. 5,400.",
+      "response_sw": "Sun King Boom ni taa ya jua yenye redio iliyojengwa ndani, slot ya kadi ya kumbukumbu, chaja za simu, paneli ya jua, na stendi ya chuma. Amana: Ksh. 450, Kila siku: Ksh. 20 kwa siku 406 (Jumla: Ksh. 8,570). Bei ya pesa taslimu: Ksh. 5,400.",
+      "category": "products"
+    },
+    {
+      "keywords": ["home plus", "home plus system"],
+      "response": "Home Plus has a control unit, solar panel, 1 tube light, 2 hanging lights, and a 3-in-1 USB cable.",
+      "response_sw": "Home Plus ina kitengo cha udhibiti, paneli ya jua, taa 1 ya tube, taa 2 za kuning'inia, na kebo ya USB 3-in-1.",
+      "category": "products"
+    },
+    {
+      "keywords": ["home plus pro", "pro home system"],
+      "response": "Home Plus Pro comes with a control unit, 4 tube lights, a solar panel, and a 3-in-1 USB cable.",
+      "response_sw": "Home Plus Pro ina kitengo cha udhibiti, taa 4 za tube, paneli ya jua, na kebo ya USB 3-in-1.",
+      "category": "products"
+    },
+    {
+      "keywords": ["homeplus max", "max system", "max tv"],
+      "response": "HomePlus Max has a Control Unit, Solar Panel, 4 Tubelights, 1 motion sensor and a 3 in 1 USB Cable. It can also include a radio, torch, 24\", 32\" and 43\" TV. Various packages available with antenna or StarTimes.",
+      "response_sw": "HomePlus Max ina Kitengo cha Udhibiti, Paneli ya Jua, Taa 4 za Tube, Sensor 1 ya Mwendo na Kebo ya USB 3 in 1. Pia inaweza kujumuisha redio, tochi, TV za inchi 24, 32 na 43. Vifurushi mbalimbali vinapatikana na antenna au StarTimes.",
+      "category": "products"
+    },
+    {
+      "keywords": ["home 500x", "500x", "home 500"],
+      "response": "Sun King Home 500x features a control unit, solar panel, 4 tube lamps, 1 motion-sensing security bulb, and a USB cable with 3 charging pins. It also includes a digital flat screen (24\" or 32\"). Deposit: Ksh. 2,400, Daily: Ksh. 80 for 406 days (Total: Ksh. 34,880). Cash price: Ksh. 22,000.",
+      "response_sw": "Sun King Home 500x ina kitengo cha udhibiti, paneli ya jua, taa 4 za tube, balbu 1 ya usalama inayogundua mwendo, na kebo ya USB yenye pini 3 za kuchaji. Pia inajumuisha skrini ya gorofa ya kidijitali (24\" au 32\"). Amana: Ksh. 2,400, Kila siku: Ksh. 80 kwa siku 406 (Jumla: Ksh. 34,880). Bei ya pesa taslimu: Ksh. 22,000.",
+      "category": "products"
+    },
+    {
+      "keywords": ["powerplay pro", "powerplay", "600w"],
+      "response": "PowerPlay Pro is a complete solar-powered system capable of powering up to 600W in your home. It includes a 600W inverter, 800Wh battery, and a 450W solar panel. You can also get it with lighting and TV packages.",
+      "response_sw": "PowerPlay Pro ni mfumo kamili unaotumia nishati ya jua unaoweza kuwasha hadi 600W nyumbani kwako. Inajumuisha inverter ya 600W, betri ya 800Wh, na paneli ya jua ya 450W. Unaweza pia kuipata ikiwa na mfumo wa taa na vifurushi vya TV.",
+      "category": "products"
+    },
+    {
+      "keywords": ["powerhub inverter", "powerhub", "3300w"],
+      "response": "PowerHub Inverter powers up to 3300W in your home. It includes a 3300W inverter, a battery control unit (2.5 kWh or 5 kWh), four 450W solar panels (expandable to six or eight 450W panels), and connecting cables.",
+      "response_sw": "PowerHub Inverter inaweza kuwasha hadi 3300W nyumbani kwako. Inajumuisha inverter ya 3300W, kitengo cha udhibiti wa betri (2.5 kWh au 5 kWh), paneli nne za jua za 450W (zinazoweza kupanuliwa hadi paneli sita au nane za 450W), na nyaya za kuunganisha.",
+      "category": "products"
+    },
+    {
+      "keywords": ["smartphone", "smartphones", "pay as you go", "simu", "simu za kisasa"],
+      "response": "We offer affordable and flexible pay-as-you-go smartphone options. Please share your location so we can connect you with a sales agent for more details.",
+      "response_sw": "Tunatoa chaguzi za simu za kisasa za kulipa polepole zinazowezekana na nafuu. Tafadhali shiriki eneo lako ili tukuunganishe na mwakilishi wa mauzo kwa maelezo zaidi.",
+      "category": "products"
+    },
+    {
+      "keywords": ["catalog", "products", "price list", "view products", "orodha ya bei"],
+      "response": "You can view all our products at: https://sunking.com/shop-all. Let us know which product you're interested in, and we'll be happy to advise you further.",
+      "response_sw": "Unaweza kuona bidhaa zetu zote hapa: https://sunking.com. Tujulishe kama umependezwa na bidhaa yoyote na tutakupa maelezo zaidi.",
+      "category": "general"
+    },
+    {
+      "keywords": ["add on", "upgrade", "add tv", "ongeza tv", "boresha"],
+      "response": "Add a 24\" TV with antenna: Deposit Ksh. 2,500, Daily Ksh. 100 for 425 days (Total Ksh. 45,000). Cash: Ksh. 31,500.",
+      "response_sw": "Ongeza TV ya 24\" na antenna: Amana Ksh. 2,500, Kila siku Ksh. 100 kwa siku 425 (Jumla Ksh. 45,000). Pesa taslimu: Ksh. 31,500.",
+      "category": "products"
+    },
+    {
+      "keywords": ["account", "account number", "details", "akaunti", "nambari ya akaunti"],
+      "response": "Please share your full registered name and phone number to retrieve your account details, or dial *305# option 3.",
+      "response_sw": "Tafadhali shiriki jina lako kamili lililosajiliwa na nambari ya simu ili tupate maelezo yako ya akaunti, au piga *305# chaguo 3.",
+      "category": "account"
+    },
+    {
+      "keywords": ["pressure cooker", "cooker", "electric cooker", "mpishi wa umeme"],
+      "response": "Electric pressure cookers: Deposit Ksh. 999, Daily Ksh. 50 for 365 days (Total Ksh. 19,249). Cash: Ksh. 11,999. Available in multiple locations.",
+      "response_sw": "Mpishi wa umeme wa pressure: Amana Ksh. 999, Kila siku Ksh. 50 kwa siku 365 (Jumla Ksh. 19,249). Pesa taslimu: Ksh. 11,999. Inapatikana katika maeneo mbalimbali.",
+      "category": "products"
+    },
+    {
+      "keywords": ["how to pay", "payment instructions", "paybill", "instructions", "namna ya kulipa"],
+      "response": "Pay via M-Pesa: Go to M-PESA > Lipa kwa Bill > Paybill > Business no. 323458 > Your account number > Amount > PIN. Also via Bonga points or Airtel Money.",
+      "response_sw": "Lipa kupitia M-Pesa: Nenda M-PESA > Lipa kwa Bill > Paybill > Nambari ya biashara 323458 > Nambari yako ya akaunti > Kiwango > PIN. Pia kupitia pointi za Bonga au Airtel Money.",
+      "category": "payments"
+    }
+  ],
+  "metadata": {
+    "version": "2.0",
+    "last_updated": "2023-11-15",
+    "language_support": ["en", "sw"],
+    "product_catalog": "https://sunking.com/shop-all"
+  }
+}
