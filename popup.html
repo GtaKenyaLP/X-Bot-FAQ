@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Support Assistant</div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="extensionToggle" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+        <div class="input-section">
+            <textarea id="customerQuestion" placeholder="Paste customer question here..."></textarea>
+        </div>
+        
+        <div class="suggestion-section">
+            <div class="suggestion-title">Suggested Reply:</div>
+            <div id="suggestion">Enter a customer question to get a suggestion</div>
+            <button id="copyButton" class="button" disabled>Copy to Clipboard</button>
+        </div>
+        
+        <div class="footer">
+            Phase 1: Manual input mode
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
