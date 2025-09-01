@@ -23,5 +23,295 @@
     "intent": "delivery",
     "patterns": ["where is my order", "delivery status", "when will I get it"],
     "response": "Orders usually take 3–5 business days. Can you please share your order number so we can track it for you?"
+  },
+  {
+    "intent": "greeting",
+    "patterns": [
+      "Hello",
+      "Hi",
+      "Good morning",
+      "Good afternoon",
+      "Good evening",
+      "How are you",
+      "Hey",
+      "Greetings"
+    ],
+    "response_public_en": "Hello! Thank you for contacting Sun King. How can we assist you today?",
+    "response_private_en": "Customer greeted. Be ready to assist.",
+    "response_public_sw": "Habari! Asante kwa kuwasiliana na Sun King. Tunawezaje kukusaidia leo?",
+    "response_private_sw": "Mteja ametoa salamu. Kuwa tayari kusaidia."
+  },
+  {
+    "intent": "phones",
+    "patterns": [
+      "Do you sell phones?",
+      "What phones do you have?",
+      "Tell me about Sun King phones",
+      "Do you have smartphones?",
+      "Available phones?",
+      "Can I buy a phone?",
+      "Sun King mobile phone",
+      "Show me phones",
+      "Phone options",
+      "I want to buy a phone"
+    ],
+    "response_public_en": "Yes, Sun King offers mobile phones. Please visit the nearest Sun King shop or contact an agent for details.",
+    "response_private_en": "Assist customer with available phone models and prices.",
+    "response_public_sw": "Ndiyo, Sun King inatoa simu za mkononi. Tafadhali tembelea duka lililo karibu au wasiliana na wakala kwa maelezo zaidi.",
+    "response_private_sw": "Msaidia mteja kuhusu modeli za simu zinazopatikana na bei."
+  },
+  {
+    "intent": "tvs",
+    "patterns": [
+      "Do you sell TVs?",
+      "What TVs are available?",
+      "Sun King television",
+      "Do you have solar TVs?",
+      "I want a TV",
+      "Available TVs?",
+      "Show me TV options",
+      "Television prices",
+      "Can I buy a Sun King TV?",
+      "Tell me about TVs"
+    ],
+    "response_public_en": "Yes, Sun King offers solar-powered TVs. Please visit your nearest shop for available sizes and prices.",
+    "response_private_en": "Assist with TV models, availability, and pricing.",
+    "response_public_sw": "Ndiyo, Sun King inatoa TV zinazotumia nishati ya jua. Tafadhali tembelea duka lililo karibu kujua ukubwa na bei.",
+    "response_private_sw": "Msaidia mteja na modeli za TV, upatikanaji, na bei."
+  },
+  {
+    "intent": "power_systems",
+    "patterns": [
+      "What solar systems do you have?",
+      "Do you sell solar panels?",
+      "Tell me about power systems",
+      "Sun King home systems",
+      "Do you have lanterns?",
+      "Available solar products?",
+      "Can I buy a solar kit?",
+      "Light systems",
+      "Energy solutions",
+      "Household power"
+    ],
+    "response_public_en": "We provide a range of solar home systems and lanterns designed for reliable energy solutions.",
+    "response_private_en": "Assist customer with details on available solar home systems and lanterns.",
+    "response_public_sw": "Tunatoa mifumo ya nishati ya jua na taa za Sun King zinazotegemewa.",
+    "response_private_sw": "Msaidia mteja na maelezo ya mifumo ya nyumbani na taa zinazopatikana."
+  },
+  {
+    "intent": "payments",
+    "patterns": [
+      "How do I pay?",
+      "Can I pay with MPesa?",
+      "Payment methods",
+      "Installments",
+      "Balance inquiry",
+      "Pay by phone",
+      "How to complete payment?",
+      "Payment options",
+      "How do I check my balance?",
+      "Can I pay weekly?"
+    ],
+    "response_public_en": "Payments can be made via MPesa or through your local Sun King agent. Installments are supported.",
+    "response_private_en": "Assist customer with payment instructions and account lookup if needed.",
+    "response_public_sw": "Malipo yanaweza kufanywa kupitia MPesa au wakala wa Sun King karibu nawe. Malipo ya awamu yanaruhusiwa.",
+    "response_private_sw": "Msaidia mteja kwa maelekezo ya malipo na ukaguzi wa akaunti ikihitajika."
+  },
+  {
+    "intent": "troubleshooting",
+    "patterns": [
+      "My product is not working",
+      "The light is not charging",
+      "No power in my system",
+      "Device not turning on",
+      "Battery issue",
+      "Panel not working",
+      "Why is my system off?",
+      "Charging problem",
+      "Lamp is dead",
+      "What do I do when product fails?"
+    ],
+    "response_public_en": "Sorry for the inconvenience. Please try basic checks: ensure the panel is in sunlight and connections are secure. If it still fails, an agent will assist you.",
+    "response_private_en": "Troubleshoot with the customer. If unresolved, escalate to warranty/repair.",
+    "response_public_sw": "Pole kwa usumbufu. Tafadhali hakikisha paneli ipo juani na nyaya zimeunganishwa vizuri. Ikiwa bado haifanyi kazi, wakala atakusaidia.",
+    "response_private_sw": "Saidia mteja kufanya ukaguzi wa awali. Ikiwa haijatatuliwa, peleka kwa dhamana/ukarabati."
+  },
+  {
+    "intent": "warranty",
+    "patterns": [
+      "Is my product under warranty?",
+      "How long is the warranty?",
+      "Can I claim warranty?",
+      "Product replacement",
+      "Repair under warranty",
+      "Warranty terms",
+      "Service warranty",
+      "How many years is warranty?",
+      "What does warranty cover?",
+      "Is this repair free?"
+    ],
+    "response_public_en": "Sun King products usually come with a 2-year warranty. For a specific claim, an agent will guide you.",
+    "response_private_en": "Assist with warranty eligibility and next steps for the customer.",
+    "response_public_sw": "Bidhaa za Sun King kawaida huja na dhamana ya miaka 2. Kwa madai maalum, wakala atakusaidia.",
+    "response_private_sw": "Msaidia mteja kuthibitisha dhamana na hatua zinazofuata."
+  },
+  {
+    "intent": "shops",
+    "patterns": [
+      "Where is your nearest shop?",
+      "Shop locations",
+      "Can I find a Sun King shop?",
+      "Where to buy?",
+      "Do you have branches?",
+      "Nearest outlet",
+      "Sun King shop near me",
+      "Shop address",
+      "How do I visit your shop?",
+      "Where to get Sun King products?"
+    ],
+    "response_public_en": "You can find Sun King shops and agents across the country. Please visit your nearest outlet.",
+    "response_private_en": "Provide customer with nearest shop location details if possible.",
+    "response_public_sw": "Unaweza kupata maduka na mawakala wa Sun King kote nchini. Tafadhali tembelea duka lililo karibu nawe.",
+    "response_private_sw": "Msaidia mteja kupata maelezo ya duka lililo karibu."
+  },
+  {
+    "intent": "farewell",
+    "patterns": [
+      "Thank you",
+      "Thanks",
+      "Bye",
+      "Goodbye",
+      "See you",
+      "Okay bye",
+      "Appreciate",
+      "Cheers",
+      "Talk later",
+      "Catch you later"
+    ],
+    "response_public_en": "Thank you for contacting Sun King. We’re always happy to help!",
+    "response_private_en": "Customer ended chat politely.",
+    "response_public_sw": "Asante kwa kuwasiliana na Sun King. Daima tunafuraha kukusaidia!",
+    "response_private_sw": "Mteja amemaliza mazungumzo kwa heshima."
+  },
+  {
+    "intent": "fallback",
+    "patterns": [],
+    "response_public_en": "Thank you for your message. An agent will assist you shortly.",
+    "response_private_en": "No clear match found. Escalate to human agent.",
+    "response_public_sw": "Asante kwa ujumbe wako. Wakala atakusaidia hivi karibuni.",
+    "response_private_sw": "Hakuna mechi wazi iliyopatikana. Peleka kwa wakala wa binadamu."
+  }
+[
+  {
+    "intent": "greeting",
+    "patterns": ["hello", "hi", "hey", "good morning", "good afternoon"],
+    "response_public_en": "Hello! Thank you for contacting Sun King. How can we assist you today?",
+    "response_private_en": "Customer greeted, please assist politely.",
+    "response_public_sw": "Habari! Asante kwa kuwasiliana na Sun King. Tunawezaje kukusaidia leo?",
+    "response_private_sw": "Mteja amesalimia, tafadhali msaidia kwa heshima."
+  },
+  {
+    "intent": "phones",
+    "patterns": ["Do you sell phones?", "What phones do you have?", "I want a Sun King phone", "List available phones", "Do you have smartphones?"],
+    "response_public_en": "Yes, we offer Sun King phones. Please visit the nearest shop or contact our agent for more details.",
+    "response_private_en": "Assist customer with phone model availability and pricing.",
+    "response_public_sw": "Ndiyo, tunatoa simu za Sun King. Tafadhali tembelea duka lililo karibu au wasiliana na wakala wetu kwa maelezo zaidi.",
+    "response_private_sw": "Tafadhali msaidia mteja na upatikanaji wa simu na bei."
+  },
+  {
+    "intent": "tvs",
+    "patterns": ["Do you sell TVs?", "Tell me about Sun King TV", "I want a solar TV", "What size TV do you offer?", "TV available?"],
+    "response_public_en": "Yes, we provide Sun King solar TVs. Sizes and availability may vary. Kindly check at our shops or with an agent.",
+    "response_private_en": "Guide customer on TV models and available payment plans.",
+    "response_public_sw": "Ndiyo, tunatoa televisheni za Sun King solar. Ukubwa na upatikanaji hutofautiana. Tafadhali angalia madukani au kwa wakala.",
+    "response_private_sw": "Mwongoze mteja kuhusu modeli za TV na mipango ya malipo."
+  },
+  {
+    "intent": "lanterns",
+    "patterns": ["Do you have lanterns?", "Solar lamps available?", "I need a Sun King lamp", "What lanterns do you sell?", "Portable light?"],
+    "response_public_en": "Yes, we offer a variety of Sun King solar lanterns. Please visit our shop or agent for details.",
+    "response_private_en": "Provide details on lantern models and prices.",
+    "response_public_sw": "Ndiyo, tunatoa taa za Sun King solar. Tafadhali tembelea duka au wakala kwa maelezo.",
+    "response_private_sw": "Toa maelezo kuhusu modeli za taa na bei."
+  },
+  {
+    "intent": "radios",
+    "patterns": ["Do you sell radios?", "Any Sun King radio?", "I need a solar radio", "Portable radio available?", "Do you have radio?"],
+    "response_public_en": "Yes, we sell Sun King solar radios. Kindly check availability with a shop or agent.",
+    "response_private_en": "Guide customer on radio models.",
+    "response_public_sw": "Ndiyo, tunauza redio za Sun King solar. Tafadhali angalia upatikanaji kwa duka au wakala.",
+    "response_private_sw": "Mwongoze mteja kuhusu modeli za redio."
+  },
+  {
+    "intent": "power_systems",
+    "patterns": ["Tell me about solar kits", "Do you sell home systems?", "I want a Sun King power system", "Do you have solar panels?", "House lighting kit?"],
+    "response_public_en": "Yes, Sun King provides solar home systems for lighting and appliances. Please visit a shop for details.",
+    "response_private_en": "Share system sizes, appliances supported, and installment options.",
+    "response_public_sw": "Ndiyo, Sun King hutoa mifumo ya nyumbani ya solar kwa taa na vifaa. Tafadhali tembelea duka kwa maelezo.",
+    "response_private_sw": "Toa maelezo kuhusu ukubwa wa mifumo, vifaa vinavyoungwa, na malipo ya awamu."
+  },
+  {
+    "intent": "payments",
+    "patterns": ["How do I pay?", "Mpesa paybill?", "Installments available?", "Payment methods?", "How to complete payment?"],
+    "response_public_en": "You can make payments through MPesa using the official Sun King paybill. For installment plans, please check your account or agent.",
+    "response_private_en": "Assist customer with correct paybill and account validation.",
+    "response_public_sw": "Unaweza kufanya malipo kupitia MPesa ukitumia nambari rasmi ya malipo ya Sun King. Kwa mipango ya awamu, tafadhali angalia akaunti yako au wakala.",
+    "response_private_sw": "Msaidia mteja na nambari ya malipo na uhakiki wa akaunti."
+  },
+  {
+    "intent": "pin_codes",
+    "patterns": ["My device is locked", "How do I enter PIN?", "Where do I get unlock code?", "Device asking for PIN", "I need activation code"],
+    "response_public_en": "For your security, please provide your account details to an agent who can assist with PIN codes.",
+    "response_private_en": "Handle PIN requests carefully — verify customer identity before sharing codes.",
+    "response_public_sw": "Kwa usalama wako, tafadhali toa maelezo ya akaunti yako kwa wakala ambaye anaweza kusaidia na nambari za PIN.",
+    "response_private_sw": "Shughulikia maombi ya PIN kwa uangalifu — hakikisha utambulisho wa mteja kabla ya kushiriki nambari."
+  },
+  {
+    "intent": "troubleshooting",
+    "patterns": ["My system is not charging", "Light not working", "TV has no power", "Battery not charging", "Device stopped working"],
+    "response_public_en": "Sorry to hear that. Please check your solar panel connection and make sure it's in sunlight. If the issue continues, an agent will assist you.",
+    "response_private_en": "Guide through troubleshooting steps, escalate if unresolved.",
+    "response_public_sw": "Pole kwa usumbufu. Tafadhali hakikisha paneli yako ya solar imeunganishwa na ipo kwenye mwanga wa jua. Ikiendelea, wakala atakusaidia.",
+    "response_private_sw": "Mwongoze mteja kwa hatua za kusuluhisha tatizo, eskaleti ikiwa haijatatuliwa."
+  },
+  {
+    "intent": "warranty",
+    "patterns": ["How long is the warranty?", "Warranty period?", "Does my product have warranty?", "Repair policy?", "Service support?"],
+    "response_public_en": "All Sun King products come with warranty, usually 2 years depending on the product. Please check with your agent for details.",
+    "response_private_en": "Verify product type and warranty status in system.",
+    "response_public_sw": "Bidhaa zote za Sun King zina dhamana, kwa kawaida miaka 2 kulingana na bidhaa. Tafadhali angalia na wakala wako kwa maelezo.",
+    "response_private_sw": "Hakikisha aina ya bidhaa na hali ya dhamana kwenye mfumo."
+  },
+  {
+    "intent": "repossession",
+    "patterns": ["My product was taken", "Repossession team came", "They collected my device", "How do I get my system back?", "Why was my TV repossessed?"],
+    "response_public_en": "Repossession may occur due to missed payments. Please contact your agent or office to resolve the issue.",
+    "response_private_en": "Check customer account for overdue balances and repossession status.",
+    "response_public_sw": "Bidhaa inaweza kuchukuliwa kutokana na malipo yaliyokosa. Tafadhali wasiliana na wakala au ofisi kutatua tatizo.",
+    "response_private_sw": "Angalia akaunti ya mteja kwa salio lililochelewa na hali ya kurejesha bidhaa."
+  },
+  {
+    "intent": "shop_locations",
+    "patterns": ["Where is the nearest shop?", "Location of Sun King office?", "Do you have branches?", "Where can I buy?", "Shop near me?"],
+    "response_public_en": "You can find Sun King shops and agents across the country. Please share your location with an agent for exact directions.",
+    "response_private_en": "Assist customer with nearest shop location lookup.",
+    "response_public_sw": "Unaweza kupata maduka na mawakala wa Sun King kote nchini. Tafadhali shiriki eneo lako na wakala kwa mwelekeo sahihi.",
+    "response_private_sw": "Msaidia mteja kutafuta duka lililo karibu zaidi."
+  },
+  {
+    "intent": "farewell",
+    "patterns": ["thank you", "thanks", "bye", "goodbye", "talk later"],
+    "response_public_en": "Thank you for reaching out to Sun King. Have a great day!",
+    "response_private_en": "Customer ended chat politely.",
+    "response_public_sw": "Asante kwa kuwasiliana na Sun King. Uwe na siku njema!",
+    "response_private_sw": "Mteja amemaliza mazungumzo kwa heshima."
+  },
+  {
+    "intent": "fallback",
+    "patterns": ["other", "unknown"],
+    "response_public_en": "I can't help with this, but an agent will assist you shortly.",
+    "response_private_en": "Bot could not recognize intent, please handle manually.",
+    "response_public_sw": "Siwezi kusaidia kwa hili, lakini wakala atakusaidia hivi karibuni.",
+    "response_private_sw": "Bot haikutambua nia, tafadhali shughulikia kwa mikono."
   }
 ]
