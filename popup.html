@@ -7,25 +7,53 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">Support Assistant</div>
-            <label class="toggle-switch">
-                <input type="checkbox" id="extensionToggle" checked>
-                <span class="slider"></span>
-            </label>
+            <div class="logo">
+                <img src="icon48.png" alt="Support Assistant Logo" class="logo-icon">
+                <span class="logo-text">Support Assistant</span>
+            </div>
+            <div class="toggle-container">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="extensionToggle" checked>
+                    <span class="slider"></span>
+                </label>
+                <div class="status" id="statusText">Enabled</div>
+            </div>
         </div>
-        
-        <div class="input-section">
-            <textarea id="customerQuestion" placeholder="Paste customer question here..."></textarea>
+
+        <div class="platform-indicator" id="platformIndicator">
+            <div class="platform-dot"></div>
+            <div id="platformName">Detecting platform...</div>
         </div>
-        
+
+        <div class="detected-question">
+            <h3>Detected customer question:</h3>
+            <div class="question-text" id="customerQuestion">No message detected yet...</div>
+        </div>
+
         <div class="suggestion-section">
             <div class="suggestion-title">Suggested Reply:</div>
-            <div id="suggestion">Enter a customer question to get a suggestion</div>
+            <div id="suggestion">I can't help with this, an agent will respond shortly 👍</div>
             <button id="copyButton" class="button" disabled>Copy to Clipboard</button>
         </div>
-        
+
+        <div class="manual-mode">
+            <h4>Manual Analysis (if auto-detection fails)</h4>
+            <textarea id="manualInput" placeholder="Paste customer question here..."></textarea>
+            <button id="analyzeBtn" class="button secondary">Analyze</button>
+        </div>
+
+        <div class="language-toggle-container">
+            <span class="language-label">English</span>
+            <label class="toggle-switch small">
+                <input type="checkbox" id="languageToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="language-label">Kiswahili</span>
+        </div>
+
         <div class="footer">
-            Phase 1: Manual input mode
+            <div>Phase 2: Auto-detection mode</div>
+            <div>Supported platforms: Zendesk, Freshdesk, Facebook, Hootsuite</div>
         </div>
     </div>
     <script src="popup.js"></script>
