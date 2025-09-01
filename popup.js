@@ -1,5 +1,6 @@
 // Configuration
 const FAQ_URL = "https://raw.githubusercontent.com/GtaKenyaLP/X-Bot-FAQ/refs/heads/main/faq.json";
+const TRAINING_URL = "https://raw.githubusercontent.com/GtaKenyaLP/X-Bot-FAQ/refs/heads/main/training.json";
 const CACHE_TIME = 5 * 60 * 1000; // 5 minutes cache
 
 // DOM elements
@@ -13,6 +14,8 @@ const languageToggle = document.getElementById('languageToggle');
 // Variables
 let faqData = null;
 let lastFetchTime = 0;
+let trainingData = null;
+let lastTrainingFetch = 0;
 let currentLanguage = 'en'; // Default to English
 
 // Load saved settings
@@ -50,14 +53,12 @@ if (languageToggle) {
 
 // Fetch FAQ data from GitHub
 async function fetchFAQData() {
-    // Use cached data if it's still fresh
     const now = Date.now();
     if (faqData && (now - lastFetchTime) < CACHE_TIME) {
         return faqData;
     }
     
     try {
-        // Add timestamp to URL to prevent caching issues
         const response = await fetch(`${FAQ_URL}?t=${now}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -65,25 +66,17 @@ async function fetchFAQData() {
         const data = await response.json();
         faqData = data;
         lastFetchTime = now;
-        
-        // Store in local storage as backup
         chrome.storage.local.set({faqCache: {data: data, timestamp: now}});
-        
         return data;
     } catch (error) {
         console.error("Failed to fetch FAQ data:", error);
-        
-        // Try to use cached data from storage
         const result = await new Promise(resolve => {
             chrome.storage.local.get(['faqCache'], resolve);
         });
-        
         if (result.faqCache && result.faqCache.data) {
             faqData = result.faqCache.data;
             return faqData;
         }
-        
-        // Fallback to hardcoded FAQs if everything fails
         return {
             faqs: [
                 {
@@ -109,6 +102,26 @@ async function fetchFAQData() {
     }
 }
 
+// Fetch Training data
+async function fetchTrainingData() {
+    const now = Date.now();
+    if (trainingData && (now - lastTrainingFetch) < CACHE_TIME) {
+        return trainingData;
+    }
+
+    try {
+        const response = await fetch(`${TRAINING_URL}?t=${now}`);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+        trainingData = data;
+        lastTrainingFetch = now;
+        return data;
+    } catch (error) {
+        console.error("Failed to fetch training data:", error);
+        return { intents: [] };
+    }
+}
+
 // Generate suggestion based on input
 customerQuestion.addEventListener('input', async function() {
     if (!extensionToggle.checked) {
@@ -128,8 +141,6 @@ customerQuestion.addEventListener('input', async function() {
     if (question) {
         try {
             const faqData = await fetchFAQData();
-            
-            // Check each FAQ entry for keyword matches
             for (const faq of faqData.faqs) {
                 for (const keyword of faq.keywords) {
                     if (question.includes(keyword)) {
@@ -140,8 +151,27 @@ customerQuestion.addEventListener('input', async function() {
                 }
                 if (foundMatch) break;
             }
-            
-            // Add fade-in animation for new suggestions
+
+            // If no FAQ match, try Training intents
+            if (!foundMatch) {
+                const training = await fetchTrainingData();
+                for (const intent of training.intents) {
+                    for (const pattern of intent.patterns) {
+                        if (question.includes(pattern.toLowerCase())) {
+                            const responses = intent.responses;
+                            suggestion = currentLanguage === 'en' 
+                                ? responses[Math.floor(Math.random() * responses.length)]
+                                : (intent.responses_sw 
+                                    ? intent.responses_sw[Math.floor(Math.random() * intent.responses_sw.length)] 
+                                    : responses[Math.floor(Math.random() * responses.length)]);
+                            foundMatch = true;
+                            break;
+                        }
+                    }
+                    if (foundMatch) break;
+                }
+            }
+
             if (suggestionElement.classList) {
                 suggestionElement.classList.remove('fade-in');
                 setTimeout(() => {
@@ -173,7 +203,6 @@ copyButton.addEventListener('click', function() {
     document.execCommand('copy');
     document.body.removeChild(tempTextArea);
     
-    // Visual feedback
     const originalText = this.innerHTML;
     this.innerHTML = currentLanguage === 'en' 
         ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -200,12 +229,10 @@ copyButton.addEventListener('click', function() {
 // Clear input functionality
 clearButton.addEventListener('click', function() {
     customerQuestion.value = '';
-    // Create and dispatch input event for cross-browser compatibility
     let event;
     if (typeof Event === 'function') {
         event = new Event('input');
     } else {
-        // For older browsers
         event = document.createEvent('Event');
         event.initEvent('input', true, true);
     }
@@ -221,4 +248,9 @@ window.addEventListener('load', function() {
 // Prefetch FAQ data when the popup loads
 fetchFAQData().catch(error => {
     console.error("Initial FAQ fetch failed:", error);
+});
+
+// Prefetch Training data when the popup loads
+fetchTrainingData().catch(error => {
+    console.error("Initial Training fetch failed:", error);
 });
