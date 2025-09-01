@@ -1,12 +1,21 @@
 {
   "manifest_version": 3,
   "name": "Support Assistant",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Helps customer support agents with quick replies",
   "permissions": [
     "storage",
     "activeTab",
-    "scripting"
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.zendesk.com/*",
+    "https://*.freshdesk.com/*",
+    "https://*.facebook.com/*",
+    "https://*.hootsuite.com/*",
+    "https://*.freshchat.com/*",
+    "https://*.intercom.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -17,13 +26,27 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "https://*.zendesk.com/*",
+        "https://*.freshdesk.com/*",
+        "https://*.facebook.com/*",
+        "https://*.hootsuite.com/*",
+        "https://*.freshchat.com/*",
+        "https://*.intercom.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
   ],
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  }
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["faq.json", "training.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
