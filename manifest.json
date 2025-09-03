@@ -1,52 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Support Assistant",
-  "version": "1.1",
-  "description": "Helps customer support agents with quick replies",
+  "name": "AI Support Agent Helper",
+  "version": "1.0",
+  "description": "Generate AI-powered responses for customer support.",
   "permissions": [
-    "storage",
-    "activeTab",
-    "scripting",
-    "tabs"
-  ],
-  "host_permissions": [
-    "https://*.zendesk.com/*",
-    "https://*.freshdesk.com/*",
-    "https://*.facebook.com/*",
-    "https://*.hootsuite.com/*",
-    "https://*.freshchat.com/*",
-    "https://*.intercom.com/*"
+    "storage"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Support Assistant"
+    "default_title": "Generate AI Response"
   },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://*.zendesk.com/*",
-        "https://*.freshdesk.com/*",
-        "https://*.facebook.com/*",
-        "https://*.hootsuite.com/*",
-        "https://*.freshchat.com/*",
-        "https://*.intercom.com/*"
-      ],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": ["faq.json", "training.json"],
-      "matches": ["<all_urls>"]
-    }
-  ]
+  }
 }
