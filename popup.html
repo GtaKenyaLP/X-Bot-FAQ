@@ -2,60 +2,88 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="popup.css">
+    <style>
+        body {
+            width: 450px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #output {
+            white-space: pre-wrap;
+            border: 1px solid #ddd;
+            padding: 12px;
+            margin-top: 10px;
+            min-height: 80px;
+            max-height: 300px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        #status {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            text-align: center;
+        }
+        .copy-btn {
+            background-color: #2196F3;
+        }
+        .copy-btn:hover {
+            background-color: #0b7dda;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <img src="icon48.png" alt="Support Assistant Logo" class="logo-icon">
-                <span class="logo-text">Support Assistant</span>
-            </div>
-            <div class="toggle-container">
-                <label class="toggle-switch">
-                    <input type="checkbox" id="extensionToggle" checked>
-                    <span class="slider"></span>
-                </label>
-                <div class="status" id="statusText">Enabled</div>
-            </div>
-        </div>
-
-        <div class="platform-indicator" id="platformIndicator">
-            <div class="platform-dot"></div>
-            <div id="platformName">Detecting platform...</div>
-        </div>
-
-        <div class="detected-question">
-            <h3>Detected customer question:</h3>
-            <div class="question-text" id="customerQuestion">No message detected yet...</div>
-        </div>
-
-        <div class="suggestion-section">
-            <div class="suggestion-title">Suggested Reply:</div>
-            <div id="suggestion">I can't help with this, an agent will respond shortly 👍</div>
-            <button id="copyButton" class="button" disabled>Copy to Clipboard</button>
-        </div>
-
-        <div class="manual-mode">
-            <h4>Manual Analysis (if auto-detection fails)</h4>
-            <textarea id="manualInput" placeholder="Paste customer question here..."></textarea>
-            <button id="analyzeBtn" class="button secondary">Analyze</button>
-        </div>
-
-        <div class="language-toggle-container">
-            <span class="language-label">English</span>
-            <label class="toggle-switch small">
-                <input type="checkbox" id="languageToggle">
-                <span class="slider"></span>
-            </label>
-            <span class="language-label">Kiswahili</span>
-        </div>
-
-        <div class="footer">
-            <div>Phase 2: Auto-detection mode</div>
-            <div>Supported platforms: Zendesk, Freshdesk, Facebook, Hootsuite</div>
-        </div>
+    <div id="setup">
+        <h3>🔐 Setup Your API Key</h3>
+        <p>1. Get your free API key from <a href="https://console.groq.com/" target="_blank">Groq Cloud</a>.</p>
+        <p>2. Paste it below. It is stored only on your computer.</p>
+        <input type="password" id="apiKeyInput" placeholder="Paste your Groq API key here" style="width: 100%; padding: 10px; margin: 5px 0; box-sizing: border-box;">
+        <button id="saveKeyBtn">Save Key & Continue</button>
+        <p><small>Your key is saved locally and never sent to us.</small></p>
     </div>
+
+    <div id="mainApp" style="display: none;">
+        <h3>🤖 AI Support Helper</h3>
+        <p>Paste the customer's message below:</p>
+        <textarea id="customerInput" placeholder="Paste the customer's message here..."></textarea>
+        <button id="generateBtn">Generate Response</button>
+        
+        <h4>Suggested Reply:</h4>
+        <div id="output">Response will appear here...</div>
+        <button id="copyBtn" class="copy-btn" disabled>Copy to Clipboard</button>
+        <div id="status">Ready.</div>
+        <p><small><a href="#" id="resetLink">Use a different API key</a></small></p>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
