@@ -1,18 +1,1 @@
-{
-  "manifest_version": 3,
-  "name": "AI Support Agent Helper",
-  "version": "1.0",
-  "description": "Generate AI-powered responses for customer support.",
-  "permissions": [
-    "storage"
-  ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "Generate AI Response"
-  },
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  }
-}
+
