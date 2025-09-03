@@ -6,6 +6,7 @@ const FAQ_JSON_URL = 'https://raw.githubusercontent.com/GtaKenyaLP/X-Bot-FAQ/ref
 const apiKeyInput = document.getElementById('apiKeyInput');
 const saveKeyBtn = document.getElementById('saveKeyBtn');
 const generateBtn = document.getElementById('generateBtn');
+const customerInput = document.getElementById('customerInput');
 const statusEl = document.getElementById('status');
 const outputEl = document.getElementById('output');
 const copyBtn = document.getElementById('copyBtn');
@@ -13,24 +14,22 @@ const setupDiv = document.getElementById('setup');
 const mainAppDiv = document.getElementById('mainApp');
 const resetLink = document.getElementById('resetLink');
 
-// Check if API key is already saved (in local storage)
+// Check if API key is already saved
 function checkForSavedKey() {
     const savedKey = localStorage.getItem('groqApiKey');
     if (savedKey) {
-        // Hide setup, show main app
         setupDiv.style.display = 'none';
         mainAppDiv.style.display = 'block';
     }
 }
-// Run check on popup load
 checkForSavedKey();
 
-// Save API Key entered by the user
+// Save API Key
 saveKeyBtn.addEventListener('click', () => {
     const key = apiKeyInput.value.trim();
     if (key) {
         localStorage.setItem('groqApiKey', key);
-        checkForSavedKey(); // Switch to the main app view
+        checkForSavedKey();
     } else {
         statusEl.textContent = "Please enter a valid API key.";
     }
@@ -45,7 +44,7 @@ resetLink.addEventListener('click', (e) => {
     apiKeyInput.value = '';
 });
 
-// Function to load knowledge from your JSON files
+// Function to load knowledge
 async function loadKnowledge() {
     statusEl.textContent = "Loading company knowledge...";
     try {
@@ -69,10 +68,6 @@ async function loadKnowledge() {
 
 // Main function to generate the response
 generateBtn.addEventListener('click', async () => {
-    const statusEl = document.getElementById('status');
-    const outputEl = document.getElementById('output');
-    const copyBtn = document.getElementById('copyBtn');
-
     // Get the API key from local storage
     const GROQ_API_KEY = localStorage.getItem('groqApiKey');
     if (!GROQ_API_KEY) {
@@ -80,26 +75,14 @@ generateBtn.addEventListener('click', async () => {
         return;
     }
 
-    statusEl.textContent = "Getting selected text...";
+    const customerText = customerInput.value.trim();
+    statusEl.textContent = "Checking input...";
     outputEl.textContent = "";
     copyBtn.disabled = true;
 
-    // Get the text the agent has selected on the webpage
-    let customerText;
-    try {
-        const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-        const injectionResult = await chrome.scripting.executeScript({
-            target: { tabId: tab.id },
-            func: () => window.getSelection().toString()
-        });
-        customerText = injectionResult[0].result;
-    } catch (error) {
-        statusEl.textContent = 'Error: Could not get text from page.';
-        return;
-    }
-
-    if (!customerText.trim()) {
-        statusEl.textContent = 'Error: Please select the customer\'s message first.';
+    if (!customerText) {
+        outputEl.textContent = "❌ Please paste the customer's message into the box above first.";
+        statusEl.textContent = "No message entered.";
         return;
     }
 
@@ -116,7 +99,7 @@ generateBtn.addEventListener('click', async () => {
         knowledgeContext += `${JSON.stringify(companyKnowledge.faqData, null, 2)}\n\n`;
     }
 
-    // NEW POWERFUL PROMPT
+    // POWERFUL PROMPT
     const systemPrompt = `# ROLE AND GOAL
 You are "X-Bot Support Expert", a senior support agent. Your sole goal is to de-escalate frustrated customers and solve their problems efficiently by strictly using the company's provided knowledge.
 
@@ -165,21 +148,23 @@ Your entire output must be nothing but the perfect response for the agent to cop
 
         outputEl.textContent = aiResponse;
         copyBtn.disabled = false;
-        statusEl.textContent = "Done! Click 'Copy Response'.";
+        statusEl.textContent = "Done! Click 'Copy to Clipboard'.";
 
     } catch (error) {
         console.error('Error:', error);
         statusEl.textContent = 'Error: Failed to generate response. Check your API key.';
+        outputEl.textContent = `Error details: ${error.message}`;
     }
 });
 
 // Copy the generated response to the clipboard
 copyBtn.addEventListener('click', async () => {
-    const outputText = document.getElementById('output').textContent;
+    const outputText = outputEl.textContent;
     try {
         await navigator.clipboard.writeText(outputText);
-        document.getElementById('status').textContent = 'Copied to clipboard!';
+        statusEl.textContent = 'Copied to clipboard!';
     } catch (err) {
         console.error('Failed to copy: ', err);
+        statusEl.textContent = 'Error copying to clipboard.';
     }
 });
